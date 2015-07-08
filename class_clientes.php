@@ -1,14 +1,15 @@
 ﻿<?php
 
-class clientes 
+class clientes
 {
 	private $codigo;
 	private $nome;
 	private $endereco;
-	private $cpf;
+	private $documento;
 	private $fone;
-	private $idade;
-	private $sexo;
+	private $grau;
+	private $pessoa;
+	private $cobranca;
 	
 	public function __construct() { }
 	
@@ -33,11 +34,11 @@ class clientes
 		$this->endereco=$endereco; 
 	}
 	
-	public function getCpf(){ 
-		return $this->cpf; 
+	public function getDocumento(){ 
+		return $this->documento; 
 	}
-	public function setCpf($cpf){ 
-		$this->cpf=$cpf; 
+	public function setDocumento($documento){ 
+		$this->documento=$documento; 
 	}
 	
 	public function getFone(){ 
@@ -47,19 +48,29 @@ class clientes
 		$this->fone=$fone; 
 	}
 	
-	public function getIdade(){ 
-		return $this->idade; 
+	public function getPessoa(){ 
+		return $this->pessoa; 
 	}
-	public function setIdade($idade){ 
-		$this->idade=$idade; 
+	public function setPessoa($pessoa){ 
+		$this->pessoa=$pessoa; 
 	}
 	
-	public function getSexo(){ 
-		return $this->sexo; 
+	public function getGrau(){ 
+		return $this->grau; 
 	}
-	public function setSexo($sexo){ 
-		$this->sexo=$sexo; 
+	
+	public function setGrau($grau) { 
+		$this->grau=$grau; 
 	}
+
+	public function getCobranca(){ 
+		return $this->cobranca; 
+	}
+	
+	public function setCobranca($cobranca) { 
+		$this->cobranca=$cobranca; 
+	}
+
 	
 }
 ?>

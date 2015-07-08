@@ -17,6 +17,9 @@ usort($cliente, ($op == 'D' ? 'pes_desc' : 'pes_asc'));
                     </th>
                     <th>Nome</th>
                     <th>Fone</th>
+                    <th>Pessoa</th>
+                    <th>CPF / CNPJ</th>
+                    <th>Grau</th>
                     <th>Exibir</th>
                 </tr>
             </thead>
@@ -27,7 +30,14 @@ usort($cliente, ($op == 'D' ? 'pes_desc' : 'pes_asc'));
                 echo "<td>".$cli->getCodigo()."</td>";
                 echo "<td>".$cli->getNome()."</td>";
                 echo "<td>".$cli->getFone()."</td>";
-                echo "<td><a href='exibir!$op!$key'>Ver</a></td>";
+				echo "<td>".$cli->getPessoa()."</td>";
+				echo "<td>".$cli->getDocumento()."</td>";
+				echo "<td>";
+				for ($s=1;$s<=$cli->getGrau();$s++) {
+					echo "<i class='icon-star'></i>";
+				}
+				echo "</td>";
+                echo "<td><a href='exibir!$op!$key'><i class='icon-search'></i></span></a></td>";
                 echo "</tr>";
             }
             ?>	

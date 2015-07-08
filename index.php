@@ -1,5 +1,6 @@
 ﻿<?php
 	date_default_timezone_set('America/Sao_Paulo');
+	include_once "cliente_interface.php";
 	include_once "inc_clientes.php";
 ?>
 <!doctype html>
@@ -26,7 +27,7 @@
             		<span class="icon-bar"></span>
           		</a>
           		
-                <a class="brand" href="#">Fase 2</a>
+                <a class="brand" href="#">Fase 3</a>
           		<div class="nav-collapse collapse">
                     <ul class="nav">
                       	<li><a href="home">Home</a></li>
