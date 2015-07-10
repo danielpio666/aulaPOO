@@ -1,6 +1,6 @@
 ﻿<?php
 
-interface Grau {
+interface interfaceGrau {
 	
 	public function getGrau();
 

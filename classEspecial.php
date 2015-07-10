@@ -1,6 +1,6 @@
 ﻿<?php
 
-class especial extends clientes implements Grau, Cobranca {
+class classEspecial extends clientes {
 	private $fantasia;
 	private $responsavel;
 	

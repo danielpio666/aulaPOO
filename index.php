@@ -1,6 +1,6 @@
 ﻿<?php
 	date_default_timezone_set('America/Sao_Paulo');
-	include_once "cliente_interface.php";
+	include_once "interfaceCliente.php";
 	include_once "inc_clientes.php";
 ?>
 <!doctype html>

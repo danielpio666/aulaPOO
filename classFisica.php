@@ -1,6 +1,6 @@
 ﻿<?php
 
-class fisica extends clientes implements Grau {
+class classFisica extends clientes {
 	private $idade;
 	private $sexo;
 	

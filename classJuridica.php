@@ -1,6 +1,6 @@
 ﻿<?php
 
-class juridica extends clientes implements Grau {
+class classJuridica extends clientes {
 	private $fantasia;
 	private $responsavel;
 	

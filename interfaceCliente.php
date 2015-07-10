@@ -1,6 +1,6 @@
 ﻿<?php
 
-interface ClienteInterface {
+interface interfaceCliente {
 
 	public function getCodigo();
 	public function getNome(); 

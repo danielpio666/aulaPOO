@@ -1,6 +1,6 @@
 ﻿<?php
 
-class clientes
+class clientes  implements interfaceGrau, interfaceCobranca
 {
 	private $codigo;
 	private $nome;

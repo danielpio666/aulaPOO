@@ -1,6 +1,6 @@
 ﻿<?php
 
-interface Cobranca {
+interface interfaceCobranca {
 	
 	public function getCobranca();
 
