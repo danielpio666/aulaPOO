@@ -1,6 +1,9 @@
 ﻿<?php
+	define('CLASS_DIR', 'src/');
+	set_include_path(get_include_path().PATH_SEPARATOR.CLASS_DIR);
+	spl_autoload_register();
+
 	date_default_timezone_set('America/Sao_Paulo');
-	include_once "interfaceCliente.php";
 	include_once "inc_clientes.php";
 ?>
 <!doctype html>

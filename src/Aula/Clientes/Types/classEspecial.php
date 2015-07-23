@@ -1,6 +1,8 @@
 ﻿<?php
 
-class classEspecial extends clientes {
+namespace Aula\Clientes\Types;
+
+class classEspecial extends \Aula\Clientes\classClientes {
 	private $fantasia;
 	private $responsavel;
 	

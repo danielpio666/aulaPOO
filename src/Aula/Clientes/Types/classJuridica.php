@@ -1,6 +1,8 @@
 ﻿<?php
 
-class classJuridica extends clientes {
+namespace Aula\Clientes\Types;
+
+class classJuridica extends \Aula\Clientes\classClientes {
 	private $fantasia;
 	private $responsavel;
 	
