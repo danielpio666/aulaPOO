@@ -1,7 +1,13 @@
-﻿<?php
+<?php
+/**
+ * Created by PhpStorm.
+ * User: DanielPio
+ * Date: 03/08/2015
+ * Time: 08:09
+ */
+
+namespace Aula\Clientes;
 
 interface interfaceCobranca {
-	
-	public function getCobranca();
-
+    public function getCobranca();
 }

@@ -1,10 +1,10 @@
-﻿<?php
-	define('CLASS_DIR', 'src/');
-	set_include_path(get_include_path().PATH_SEPARATOR.CLASS_DIR);
-	spl_autoload_register();
+<?php
+define('CLASS_DIR', 'src/');
+set_include_path(get_include_path().PATH_SEPARATOR.CLASS_DIR);
+spl_autoload_register();
 
-	date_default_timezone_set('America/Sao_Paulo');
-	include_once "inc_clientes.php";
+date_default_timezone_set('America/Sao_Paulo');
+include_once "inc_clientes.php";
 ?>
 <!doctype html>
 <html lang="pt">
@@ -21,38 +21,38 @@
 </head>
 
 <body>
-	<div class="navbar navbar-inverse navbar-fixed-top">
-    	<div class="navbar-inner">
-        	<div class="container-fluid">
-          		<a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            		<span class="icon-bar"></span>
-            		<span class="icon-bar"></span>
-            		<span class="icon-bar"></span>
-          		</a>
-          		
-                <a class="brand" href="#">Fase 3</a>
-          		<div class="nav-collapse collapse">
-                    <ul class="nav">
-                      	<li><a href="home">Home</a></li>
-                    </ul>
-          		</div><!--/.nav-collapse -->
-        	</div>
-      	</div>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+
+            <a class="brand" href="#">Fase 3</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li><a href="home">Home</a></li>
+                </ul>
+            </div><!--/.nav-collapse -->
+        </div>
     </div>
-    
-    <div class="container-fluid">
-    	<div class="row">&nbsp;</div>
-        <div class="row">&nbsp;</div>
-       	<? include "_opcoes.php"; ?>
-  	</div>
-         
-    <nav class="navbar navbar-fixed-bottom">
-    	<div class="navbar-default" align="center">
+</div>
+
+<div class="container-fluid">
+    <div class="row">&nbsp;</div>
+    <div class="row">&nbsp;</div>
+    <? include "_opcoes.php"; ?>
+</div>
+
+<nav class="navbar navbar-fixed-bottom">
+    <div class="navbar-default" align="center">
         	<span class="col-lg-12">
 	           	&bull; Programação POO &bull; Todos os Diretos Reservados &bull; &copy; <?=date('Y')?> &bull;
             </span>
-        </div>
-    </nav> 
+    </div>
+</nav>
 </body>
 </html>
 
