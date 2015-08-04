@@ -1,5 +1,5 @@
 <?php
-define('CLASS_DIR', 'src/');
+define('CLASS_DIR', "C:/Apache/htdocs/Aula/AulaPOO/src/");
 set_include_path(get_include_path().PATH_SEPARATOR.CLASS_DIR);
 spl_autoload_register();
 
