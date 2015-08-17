@@ -1,5 +1,11 @@
 <?php
-usort($cliente, ($op == 'D' ? 'pes_desc' : 'pes_asc'));
+$ordem = ($op == 'D' ? 'DESC' : 'ASC');
+
+$sql_txt = "SELECT * FROM clientes ORDER BY id $ordem";
+$conexao->query($sql_txt);
+
+print_r($conexao);
+
 ?>
 
 <div class="row-fluid">
@@ -25,15 +31,17 @@ usort($cliente, ($op == 'D' ? 'pes_desc' : 'pes_asc'));
             </thead>
             <?
 
-            foreach($cliente as $key => &$cli) {
+            while( $cli = $conexao->fetch(\PDO::FETCH_ASSOC)) {
+//            foreach($conexao as $cli) {
+
                 echo "<tr>";
-                echo "<td>".$cli->getCodigo()."</td>";
-                echo "<td>".$cli->getNome()."</td>";
-                echo "<td>".$cli->getFone()."</td>";
-                echo "<td>".$cli->getPessoa()."</td>";
-                echo "<td>".$cli->getDocumento()."</td>";
+                echo "<td>".$cli['id']."</td>";
+                echo "<td>".$cli['nome']."</td>";
+                echo "<td>".$cli['fone']."</td>";
+                echo "<td>".$cli['pessoa']."</td>";
+                echo "<td>".$cli['documento']."</td>";
                 echo "<td>";
-                for ($s=1;$s<=$cli->getGrau();$s++) {
+                for ($s=1;$s<=$cli['grau'];$s++) {
                     echo "<i class='icon-star'></i>";
                 }
                 echo "</td>";

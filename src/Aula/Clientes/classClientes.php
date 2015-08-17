@@ -11,7 +11,7 @@ namespace Aula\Clientes;
 use Aula\Clientes\interfaceCobranca;
 use Aula\Clientes\interfaceGrau;
 
-class classClientes implements interfaceGrau, interfaceCobranca {
+abstract class classClientes implements interfaceGrau, interfaceCobranca {
     private $codigo;
     private $nome;
     private $endereco;
