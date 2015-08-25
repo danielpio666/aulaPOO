@@ -1,10 +1,15 @@
 <?php
+require_once __DIR__ . "/../autoload.php";
+
+use Aula\Clientes\Conexao\Connect;
+
+$config = require_once __DIR__ . '/../src/Aula/Clientes/Conexao/config.inc.php';
+$conn   = new Connect($config);
+$conexao = $conn->getPDO();
 $ordem = ($op == 'D' ? 'DESC' : 'ASC');
 
-$sql_txt = "SELECT * FROM clientes ORDER BY id $ordem";
-$conexao->query($sql_txt);
-
-print_r($conexao);
+$sql = "SELECT * FROM clientes ORDER BY id $ordem";
+$stmt = $conexao->query($sql);
 
 ?>
 
@@ -29,11 +34,9 @@ print_r($conexao);
                 <th>Exibir</th>
             </tr>
             </thead>
-            <?
+            <?php
 
-            while( $cli = $conexao->fetch(\PDO::FETCH_ASSOC)) {
-//            foreach($conexao as $cli) {
-
+            while( $cli = $stmt->fetch(\PDO::FETCH_ASSOC)) {
                 echo "<tr>";
                 echo "<td>".$cli['id']."</td>";
                 echo "<td>".$cli['nome']."</td>";
@@ -45,7 +48,7 @@ print_r($conexao);
                     echo "<i class='icon-star'></i>";
                 }
                 echo "</td>";
-                echo "<td><a href='exibir!$op!$key'><i class='icon-search'></i></span></a></td>";
+                echo "<td><a href='exibir!$op!{$cli['id']}'><i class='icon-search'></i></a></td>";
                 echo "</tr>";
             }
             ?>

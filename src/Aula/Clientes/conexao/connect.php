@@ -1,10 +1,10 @@
 <?php
 
-namespace Aula\Clientes\conexao;
+namespace Aula\Clientes\Conexao;
 
 use PDO;
 
-class connect {
+class Connect {
     /**
      * @var \PDO
      */

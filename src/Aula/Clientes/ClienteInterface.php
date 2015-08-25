@@ -1,14 +1,8 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: DanielPio
- * Date: 03/08/2015
- * Time: 08:08
- */
 
 namespace Aula\Clientes;
 
-interface interfaceCliente {
+interface ClienteInterface {
     public function getCodigo();
     public function getNome();
     public function getEndereco();
@@ -16,6 +10,12 @@ interface interfaceCliente {
     public function getFone();
     public function getPessoa();
     public function getGrau();
+	public function getIdade();
+    public function getSexo();
+	public function getFantasia();
+	public function getResponsavel();
+	
+	
 }
 
 ?>

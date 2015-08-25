@@ -3,14 +3,12 @@
  * Created by PhpStorm.
  * User: DanielPio
  * Date: 03/08/2015
- * Time: 08:10
+ * Time: 08:09
  */
 
 namespace Aula\Clientes;
 
-
-interface interfaceGrau {
-
-    public function getGrau();
-
+interface Cobranca
+{
+    public function getCobranca();
 }

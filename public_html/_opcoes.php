@@ -13,5 +13,4 @@ if (substr_count($atual, '!') > 0 ) {
     $cod 	= '';
 }
 
-include $pagina;
-?>
+require $pagina;

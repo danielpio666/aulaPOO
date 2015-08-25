@@ -3,11 +3,13 @@
  * Created by PhpStorm.
  * User: DanielPio
  * Date: 03/08/2015
- * Time: 08:09
+ * Time: 08:10
  */
 
 namespace Aula\Clientes;
 
-interface interfaceCobranca {
-    public function getCobranca();
+
+interface Grau
+{
+    public function getGrau();
 }

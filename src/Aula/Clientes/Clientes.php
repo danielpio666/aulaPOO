@@ -8,20 +8,20 @@
 
 namespace Aula\Clientes;
 
-use Aula\Clientes\interfaceCobranca;
-use Aula\Clientes\interfaceGrau;
 
-abstract class classClientes implements interfaceGrau, interfaceCobranca {
+abstract class Clientes implements ClienteInterface, Grau, Cobranca
+{
     private $codigo;
     private $nome;
     private $endereco;
-    private $documento;
     private $fone;
     private $grau;
     private $pessoa;
+	private $idade;
+	private $sexo;
+	private $fantasia;
+	private $responsavel;
     private $cobranca;
-
-    public function __construct() { }
 
     public function getCodigo(){
         return $this->codigo;
@@ -44,12 +44,8 @@ abstract class classClientes implements interfaceGrau, interfaceCobranca {
         $this->endereco=$endereco;
     }
 
-    public function getDocumento(){
-        return $this->documento;
-    }
-    public function setDocumento($documento){
-        $this->documento=$documento;
-    }
+    abstract public function getDocumento();
+    abstract public function setDocumento($documento);
 
     public function getFone(){
         return $this->fone;
@@ -80,7 +76,37 @@ abstract class classClientes implements interfaceGrau, interfaceCobranca {
     public function setCobranca($cobranca) {
         $this->cobranca=$cobranca;
     }
+	
+	public function getIdade(){
+        return $this->idade;
+    }
+
+    public function setIdade($idade) {
+        $this->idade=$idade;
+    }
+	
+	public function getSexo(){
+        return $this->sexo;
+    }
+
+    public function setSexo($sexo) {
+        $this->sexo=$sexo;
+    }
+	
+	public function getFantasia(){
+        return $this->fantasia;
+    }
+
+    public function setFantasia($fantasia) {
+        $this->fantasia=$fantasia;
+    }
+	
+	public function getResponsavel(){
+        return $this->responsavel;
+    }
+
+    public function setResponsavel($responsavel) {
+        $this->responsavel=$responsavel;
+    }
 
 }
-
-?>
